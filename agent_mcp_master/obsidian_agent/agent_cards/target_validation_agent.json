@@ -1,0 +1,42 @@
+{
+    "name": "Target Validation Agent",
+    "description": "Helps with validation CAS-13 CRISPR RNA edits",
+    "url": "http://localhost:27202/",
+    "provider": null,
+    "version": "1.0.0",
+    "documentationUrl": null,
+    "capabilities": {
+        "streaming": "True",
+        "pushNotifications": "True",
+        "stateTransitionHistory": "False"
+    },
+    "authentication": {
+        "credentials": null,
+        "schemes": [
+            "public"
+        ]
+    },
+    "defaultInputModes": [
+        "text",
+        "text/plain"
+    ],
+    "defaultOutputModes": [
+        "text",
+        "text/plain"
+    ],
+    "skills": [
+        {
+            "id": "add_obsidian_content",
+            "name": "Add or update Obsidian content",
+            "description": "Helps with adding or updating content to Obsidian",
+            "tags": [
+                "add or update an Obsidian file"
+            ],
+            "examples": [
+                "Update Obsidian file welcome.md with the following content: hello"
+            ],
+            "inputModes": null,
+            "outputModes": null
+        }
+    ]
+}
