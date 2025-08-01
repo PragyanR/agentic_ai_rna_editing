@@ -31,29 +31,11 @@ def get_agent(agent_card: AgentCard):
             return OrchestratorAgent()
         if agent_card.name == 'Langraph Planner Agent':
             return LangraphPlannerAgent()
-        if agent_card.name == 'Air Ticketing Agent':
+        if agent_card.name == 'CRISPR Cas13 Agent':
             return ExperimentAgent(
-                agent_name='AirTicketingAgent',
-                description='Book air tickets given a criteria',
-                instructions=prompts.AIRFARE_COT_INSTRUCTIONS,
-            )
-        if agent_card.name == 'Gene Lookup Agent':
-            return ExperimentAgent(
-                agent_name='GeneLookupAgent',
-                description='Lookup gene information for a given gene name',
-                instructions=prompts.GENE_LOOKUP_COT_INSTRUCTIONS,
-            )
-        if agent_card.name == 'Hotel Booking Agent':
-            return ExperimentAgent(
-                agent_name='HotelBookingAgent',
-                description='Book hotels given a criteria',
-                instructions=prompts.HOTELS_COT_INSTRUCTIONS,
-            )
-        if agent_card.name == 'Car Rental Agent':
-            return ExperimentAgent(
-                agent_name='CarRentalBookingAgent',
-                description='Book rental cars given a criteria',
-                instructions=prompts.CARS_COT_INSTRUCTIONS,
+                agent_name='CRISPRCas13Agent',
+                description='CRISPR Cas13 specific tools',
+                instructions=prompts.CRISPR_CAS13_COT_INSTRUCTIONS,
             )
 
     except Exception as e:

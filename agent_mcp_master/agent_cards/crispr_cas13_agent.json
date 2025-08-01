@@ -1,6 +1,6 @@
 {
-    "name": "CRISPR-Cas13 Agent",
-    "description": "Tools pertaining to CRISPR-Cas13",
+    "name": "CRISPR Cas13 Agent",
+    "description": "Tools pertaining to CRISPR Cas13",
     "url": "http://localhost:10106/",
     "provider": null,
     "version": "1.0.0",
