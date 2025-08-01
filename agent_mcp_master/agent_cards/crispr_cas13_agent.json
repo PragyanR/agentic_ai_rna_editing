@@ -1,0 +1,42 @@
+{
+    "name": "CRISPR-Cas13 Agent",
+    "description": "Tools pertaining to CRISPR-Cas13",
+    "url": "http://localhost:10106/",
+    "provider": null,
+    "version": "1.0.0",
+    "documentationUrl": null,
+    "capabilities": {
+        "streaming": "True",
+        "pushNotifications": "True",
+        "stateTransitionHistory": "False"
+    },
+    "authentication": {
+        "credentials": null,
+        "schemes": [
+            "public"
+        ]
+    },
+    "defaultInputModes": [
+        "text",
+        "text/plain"
+    ],
+    "defaultOutputModes": [
+        "text",
+        "text/plain"
+    ],
+    "skills": [
+        {
+            "id": "get_gene_info",
+            "name": "Gene Lookup Agent",
+            "description": "Helps with gene lookup given a gene name",
+            "tags": [
+                "Lookup gene information"
+            ],
+            "examples": [
+                "Lookup gene information for gene, SERPINA1"
+            ],
+            "inputModes": null,
+            "outputModes": null
+        }
+    ]
+}
