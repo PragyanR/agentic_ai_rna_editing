@@ -38,10 +38,11 @@ class OrchestratorAgent(BaseAgent):
 
     async def generate_summary(self) -> str:
         client = genai.Client()
+        #print(f'########################: {str(self.results)}')
         response = client.models.generate_content(
             model='gemini-2.0-flash',
             contents=prompts.SUMMARY_COT_INSTRUCTIONS.replace(
-                '{travel_data}', str(self.results)
+                '{experiment_data}', str(self.results)
             ),
             config={'temperature': 0.0},
         )
@@ -256,3 +257,5 @@ class OrchestratorAgent(BaseAgent):
                 'require_user_input': False,
                 'content': summary,
             }
+
+

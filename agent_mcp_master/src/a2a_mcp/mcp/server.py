@@ -194,18 +194,26 @@ def serve(host, port, transport):  # noqa: PLR0915
             lastest_accession_number = accession_number[0]
 
             ncbi = NCBILookup()
-            gene_info = ncbi.get_sequence_info(lastest_accession_number, return_json=True)
-            logger.info(gene_info)
+            gene_info_json = json.loads(ncbi.get_sequence_info(lastest_accession_number, return_json=True))
+            logger.info(gene_info_json)
             
             # Get FASTA sequence information
-            sequence_info = ncbi.get_fasta_sequence(lastest_accession_number, return_json=True)
-            logger.info(sequence_info)
-
-            json.loads(gene_info)
+            sequence_info_json = json.loads(ncbi.get_fasta_sequence(lastest_accession_number, return_json=True))
+            logger.info(sequence_info_json)
 
             #return {'gene_info': gene_info, 'sequence_info':sequence_info}
             return {'latest_accession_number': lastest_accession_number, 
-                'all_accession_numbers' : ", ".join(accession_number)}
+                'all_accession_numbers' : ", ".join(accession_number),
+                'definition':gene_info_json['definition'],
+                'length': gene_info_json['length'],
+                'organism': gene_info_json['organism'],
+                'taxonomy': gene_info_json['taxonomy'],
+                'created_date': gene_info_json['create_date'],
+                'updated_date':gene_info_json['update_date'],
+                'fasta_header': sequence_info_json['fasta_header'],
+                'sequence': sequence_info_json['sequence']
+                }
+
         except Exception as e:
             # Catch-all for any other unhandled exceptions
             logger.error(f"An unexpected error occurred: {e}")
@@ -237,7 +245,7 @@ def serve(host, port, transport):  # noqa: PLR0915
             The json with information .
         """
         logger.info(f'Validating off-target impact for : {gene_name}')
-        return {'off_traget_impact': "None"}
+        return {'off_target_impact': "None"}
 
     @mcp.tool()
     def query_places_data(query: str):
