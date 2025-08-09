@@ -107,12 +107,15 @@ Your question should follow the example format below
 
 
 DECISION TREE:
-1. Gene Name
+1. Experiment Purpose
+    -If unknown, ask for the experiment purpose
+    -If known, proceed to step 2.
+2. Gene Name
     - If unknown, ask for Gene Name.
-    - If known, proceed to step 2.
-2. Cas Variant
-    - If unknown, ask for Cas Variant.
     - If known, proceed to step 3.
+3. Cas Variant
+    - If unknown, ask for Cas Variant.
+    - If known, proceed to step 4.
 
 
 CHAIN-OF-THOUGHT PROCESS:
