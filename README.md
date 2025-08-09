@@ -1,4 +1,25 @@
-Refrences:
+## Introduction
+This repository contains source code and artifacts from my research on Agentic AI guided RNA editing with CRISPR-Cas13. I demonstrate how Agentic AI can be used to plan Cas13 experiments and run select tasks autonomously to improve experimentation efficiency and reduce the barrier to entry. The approach I used can be extented to other processes as well.
+
+## Contact
+Name: Pragyan Ramamoorthy</br>
+Email: Pragyan0314@gmail.com
+
+## Artifacts from UCLA Presentation
+- [Slide Deck](https://github.com/PragyanR/agentic_ai_rna_editing/blob/main/artifacts/UCLA_Presentation_Final.pdf)
+- [Poster](https://github.com/PragyanR/agentic_ai_rna_editing/blob/main/artifacts/UCLA_Poster_Final.pdf)
+- [References](https://github.com/PragyanR/agentic_ai_rna_editing/edit/main/README.md#references)
+
+## Configuration Steps
+- Check out the repository
+- Install uv, if you don't have it installed
+- Initialize uv (uv venv) and activate
+- Edit .env file to include your GOOGLE_API_KEY. You can create an API Key using this [link](https://ai.google.dev/gemini-api/docs/models).
+- Modify the shell scripts (*.sh files) to reflect your project path
+- Run run_all.sh scripts to start the servers and the UI
+- Once all servers come up fine, using your browser, launch http://127.0.0.1:5001/
+
+## References
 1)	Abudayyeh, O. O., Gootenberg, J. S., Essletzbichler, P., Han, S., Joung, J., Belanto, J. J., Verdine, V., Cox, D. B. T., Kellner, M. J., Regev, A., Lander, E. S., Voytas, D. F., Ting, A. Y., & Zhang, F. (2017). RNA targeting with CRISPR–Cas13. Nature, 550(7675), 280–284. https://doi.org/10.1038/nature24049
 
 2)	Bitesize Bio. (2020, February 25). CRISPR-Cas13: A newbie’s guide. https://bitesizebio.com/64751/crispr-cas13/
