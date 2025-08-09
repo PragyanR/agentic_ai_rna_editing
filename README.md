@@ -1,5 +1,5 @@
 ## Introduction
-This repository contains source code and artifacts from my research on Agentic AI guided RNA editing with CRISPR-Cas13. I demonstrate how Agentic AI can be used to plan Cas13 experiments and run select tasks autonomously to improve experimentation efficiency and reduce the barrier to entry. The approach I used can be extented to other processes as well.
+This repository contains source code and artifacts from my research as part of UCLA's Emerging Scientists Program. Research was on Agentic AI guided RNA editing with CRISPR-Cas13. I demonstrate how Agentic AI can be used to plan Cas13 experiments and run select tasks autonomously to improve experimentation efficiency and reduce the barrier to entry. The approach I used can be extented to other processes as well.
 
 ## Contact
 Name: Pragyan Ramamoorthy</br>
